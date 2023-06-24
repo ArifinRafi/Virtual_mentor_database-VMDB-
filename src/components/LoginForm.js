@@ -1,18 +1,10 @@
 import React from 'react';
-import Signup from './Signup';
-import Navbar from './Navbar';
+import Signup from '../pages/Signup';
 
-const Login = () => {
-  return (
-    <div>
-      <Navbar></Navbar>
-      <div className="hero min-h-screen  bg-gradient-to-r  from-red-200 to-blue-400 shadow-2xl">
-  <div className="hero-content flex-col lg:flex-row-reverse">
-    <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Login now!</h1>
-      <p className="py-6">Provident cupiditate Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea vel magni quidem quis, saepe nobis maiores soluta minima quia assumenda tempora blanditiis sequi, fugit iusto repudiandae consequatur, quibusdam facilis fuga. </p>
-    </div>
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+const LoginForm = () => {
+    return (
+        <div>
+            <div className="card flex-shrink-0 w-96 max-w-xl shadow-2xl bg-base-100">
       <div className="card-body">
         <div className="form-control">
           <label className="label">
@@ -45,11 +37,8 @@ const Login = () => {
            </p></div>
       </div>
     </div>
-  </div>
-</div>
-      
-    </div>
-  );
+        </div>
+    );
 };
 
-export default Login;
+export default LoginForm;
