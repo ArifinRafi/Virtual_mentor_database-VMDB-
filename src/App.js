@@ -6,8 +6,9 @@ import Signup from './components/Signup';
 
 function App() {
   const router = createBrowserRouter([
-    {path:'/', element: <Login></Login>},
-    {path:'/Signup', element: <Signup></Signup>}
+    {path:'/Login', element: <Login></Login>},
+    {path:'/Signup', element: <Signup></Signup>},
+    {path:'/Navbar', element: <Navbar></Navbar>}
   ])
   return (
     <div className="App">
