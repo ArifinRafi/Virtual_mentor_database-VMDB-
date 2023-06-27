@@ -1,10 +1,8 @@
 import React from 'react';
-import Navbar from './Navbar';
 
 const Signup = () => {
     return (
-        <div>
-          
+        <div>          
            <div className="form-control">
           <label className="label">
             <span className="label-text">First Name</span>
