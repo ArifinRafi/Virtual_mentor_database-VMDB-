@@ -3,7 +3,7 @@ import Signup from '../pages/Signup';
 
 const LoginForm = () => {
     return (
-        <div>
+        <div >
             <div className="card flex-shrink-0 w-96 max-w-xl shadow-2xl bg-base-100">
       <div className="card-body">
         <div className="form-control">
@@ -22,7 +22,7 @@ const LoginForm = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn text-white bg-gradient-to-r  from-red-500 to-blue-700 shadow-2xl">Login</button>
+          <button className = "btn text-white bg-gradient-to-r  from-red-500 to-blue-700 shadow-2xl">Login</button>
         </div>
         <div><p>Don't have an account?
           {/* You can open the modal using ID.showModal() method */}

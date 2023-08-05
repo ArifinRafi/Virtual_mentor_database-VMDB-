@@ -5,6 +5,7 @@ import Navbar from './pages/Navbar';
 import Signup from './pages/Signup';
 import Home from './pages/Home'
 import Search from './pages/Search';
+import Profile from './pages/Profile';
 
 function App() {
   const router = createBrowserRouter([
@@ -12,7 +13,8 @@ function App() {
     {path:'/Signup', element: <Signup></Signup>},
     {path:'/', element: <Home></Home>},
     {path:'/Home', element: <Home></Home>},
-    {path:'/Search', element: <Search></Search>}
+    {path:'/Search', element: <Search></Search>},
+    {path:'/Profile', element: <Profile></Profile>}
   ])
   return (
     <div className="App">

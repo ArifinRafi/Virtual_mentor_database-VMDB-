@@ -2,7 +2,7 @@ import React from 'react';
 
 const Signup = () => {
     return (
-        <div>          
+        <div >          
            <div className="form-control">
           <label className="label">
             <span className="label-text">First Name</span>

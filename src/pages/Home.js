@@ -6,12 +6,11 @@ import Features from '../components/Features';
 const Home = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <div>
+            <Navbar/>
                 <Carousel></Carousel>
-            </div>
-            <div> <Features></Features>
-            </div>
+            
+             <Features></Features>
+            
         </div>
     );
 };
