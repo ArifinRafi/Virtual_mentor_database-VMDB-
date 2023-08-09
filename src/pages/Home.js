@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect, useRef } from 'react';
 import Carousel from '../components/Carousel';
 import Navbar from '../pages/Navbar'
 import Features from '../components/Features';
@@ -14,7 +13,6 @@ const Home = () => {
             
             
             <Carousel></Carousel>
-            
              <Features></Features>
              <About></About>
 

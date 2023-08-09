@@ -1,7 +1,6 @@
 import React from 'react';
 import teacher from '../animations/teacher.json'
 import Lottie from 'lottie-react';
-import {FaBeer} from 'react-icons/fa';
 import {FaMale} from 'react-icons/fa';
 import {FaBook} from 'react-icons/fa';
 import {FaRunning} from 'react-icons/fa';
