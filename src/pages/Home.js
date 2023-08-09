@@ -1,15 +1,24 @@
 import React from 'react';
+import { useEffect, useRef } from 'react';
 import Carousel from '../components/Carousel';
 import Navbar from '../pages/Navbar'
 import Features from '../components/Features';
+import teacher from '../animations/teacher.json'
+import Lottie from 'lottie-react';
+import About from '../components/About';
+
 
 const Home = () => {
     return (
         <div>
-            <Navbar/>
-                <Carousel></Carousel>
+            
+            
+            <Carousel></Carousel>
             
              <Features></Features>
+             <About></About>
+
+             
             
         </div>
     );

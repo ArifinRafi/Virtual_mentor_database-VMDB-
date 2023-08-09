@@ -5,7 +5,7 @@ import LoginForm from '../components/LoginForm';
 const Login = () => {
   return (
     <div>
-      <Navbar></Navbar>
+      
       <div className="hero min-h-screen  bg-gradient-to-r  from-red-200 to-blue-400 shadow-2xl">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">

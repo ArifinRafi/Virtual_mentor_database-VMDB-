@@ -1,5 +1,7 @@
 import React from 'react';
 import Signup from '../pages/Signup';
+import teacher from '../animations/teacher.json'
+import Lottie from 'lottie-react';
 
 const LoginForm = () => {
     return (
@@ -35,6 +37,7 @@ const LoginForm = () => {
   </form>
 </dialog>
            </p></div>
+           
       </div>
     </div>
         </div>
