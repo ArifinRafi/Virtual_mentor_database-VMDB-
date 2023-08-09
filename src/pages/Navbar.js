@@ -6,7 +6,7 @@ const Navbar = () => {
     
     return (
         
-            <div className=" bg-opacity-40 top-0 z-50 backdrop-blur-lg rounded shadow-2xl w-full   navbar  text-white bg-gradient-to-r fixed grid grid-cols-3  from-purple-800/[0.8] to-red-600/[0.8] shadow-2xl ">
+            <div className=" bg-opacity-40 top-0 z-50 shadow-2xl w-full h-24   navbar  text-white bg-gradient-to-r fixed grid grid-cols-3  from-purple-800/[0.8] to-red-600/[0.8] shadow-2xl ">
   <div>
   <Link to='/' className="btn btn-ghost normal-case text-xl">VMDB</Link>
   <Link to='/Home' className="btn btn-ghost normal-case">Home</Link>

@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer p-10 bg-opacity-40  bg-purple-800 bg-opacity-60 text-white ">
   <div>
     {/* <img src={logo} className='w-[145px] h-[45px]' alt="" /> */}
-    <p>All rights reserved by Roboway Technologies 2023</p>
+    <p>All rights reserved by Virtual Mentor Database 2023</p>
   </div> 
   <div>
     <span className="footer-title">Services</span> 
