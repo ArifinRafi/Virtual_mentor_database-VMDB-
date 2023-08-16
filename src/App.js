@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Search from './pages/Search';
 import Profile from './pages/Profile';
 import Main from './Layout/Main';
+import Mentor from './pages/Mentor';
 
 function App() {
   const router = createBrowserRouter([
@@ -16,7 +17,8 @@ function App() {
   {path:'/Login', element: <Login></Login>},
   {path:'/Home', element: <Home></Home>},
   {path:'/Search', element: <Search></Search>},
-  {path:'/Profile', element: <Profile></Profile>}]},
+  {path:'/Profile', element: <Profile></Profile>},
+  {path:'/Mentor', element: <Mentor></Mentor>}]},
     
   ])
   return (

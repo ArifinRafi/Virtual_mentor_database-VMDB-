@@ -10,14 +10,11 @@ import About from '../components/About';
 const Home = () => {
     return (
         <div>
-            
-            
+              
             <Carousel></Carousel>
              <Features></Features>
              <About></About>
-
-             
-            
+                    
         </div>
     );
 };

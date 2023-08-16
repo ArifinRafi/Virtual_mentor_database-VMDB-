@@ -10,7 +10,7 @@ const Login = () => {
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Login now!</h1>
-      <p className="py-6">Procing elit. Ea vel magni quideminima quia assumenda tempora blanditiis sequi, fugit iusto repudiandae consequatur, quibusdam facilis fuga. </p>
+      <p className="py-6"> Let's explore the world of mentors. Get your favourite courses, materials and reviews </p>
     </div>
     <LoginForm className=''></LoginForm>
   </div>

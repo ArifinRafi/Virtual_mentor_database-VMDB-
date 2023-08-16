@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import {FaBeer} from 'react-icons/fa';
+import Profile from './Profile';
 
 const Navbar = () => {
     
@@ -17,7 +18,9 @@ const Navbar = () => {
   <form action="" className=''>
   <input type="text" placeholder="Search your mentor " className="input rounded-2xl input-bordered text-black w-full items-center"/>
   <div className='grid justify-items-end'>
+  <Link to='./Profile'>
   <button className='btn absolute bg-pink-600 text-white my-[-24px]'>Search</button>
+  </Link>
   </div>
   </form>
 </div>
