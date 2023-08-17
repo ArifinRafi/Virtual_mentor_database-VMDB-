@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 
 
 const Mentor = () => {
-    const videoId = 'https://www.youtube.com/watch?v=xNRJwmlRBNU';
+    // const videoId = 'xNRJwmlRBNU';
+    const videoId = ['xNRJwmlRBNU', '8hly31xKli0'];
     return (
         <div>
             <div className='grid grid-cols-2 my-36 mx-24 '>
@@ -17,13 +18,18 @@ const Mentor = () => {
                 <p>Department: CSE</p>
                 <p className='font-bold' >Lecturer, Brac University</p> 
 
-       <span className='text-2xl font-semibold'>Education:  
+       <span className=' font-semibold'>Education:  
         Dhaka University</span> <br />
-        <span className='text-2xl font-semibold'>Research Area:  
-        <span className='text-xl'>Ai, Robotics</span></span>
+        <span className=' font-semibold'>Research Area: Ai, Robotics </span> 
+        <p>Email: abc@mail.com <br />
+        Contact: 0182343434</p>
+        
+        
+        
        <div className='grid justify-items-center my-8'>
         <Rating></Rating>
        </div>
+       <button className='btn btn-primary'>Contact for Research intereset</button>
         </div>
             </div>
 
@@ -31,16 +37,23 @@ const Mentor = () => {
             <h1 className='text-2xl font-bold'>
                 Sample Recorded Classes
             </h1>
-            <div className='grid justify-items-center my-12'>
-                <YouTube videoId={videoId}></YouTube>
+            <div className='flex my-12 justify-center'
+            > {videoId.map(videoId => (
+                <YouTube key={videoId} videoId={videoId} className='mx-12' ></YouTube>
+
+            ))}
+                
+            </div>
             </div>
 
-            </div>
-            <form className='grid grid-cols-2 mx-36 my-12'>
+
+            <form className='flex mx-36 my-12'>
             <textarea className="textarea border-black w-96 h-44" placeholder="Write comments here"></textarea>
+            <button className='btn btn-primary mx-8'>Post</button>
             </form>
+            
             <div className='py-12'>
-                <Link to='/Login' className='text-xl '>Register <span className='text-blue-400'>here</span> For full Class</Link>
+                <Link to='/Login' className='btn btn-primary'> Enroll full courses here</Link>
             </div>
         </div>
     );
