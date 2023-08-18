@@ -18,7 +18,7 @@ function App() {
   {path:'/Home', element: <Home></Home>},
   {path:'/Search', element: <Search></Search>},
   {path:'/Profile', element: <Profile></Profile>},
-  {path:'/Mentor', element: <Mentor></Mentor>}]},
+  {path:'/Mentor/:id', element: <Mentor></Mentor>}]},
     
   ])
   return (
