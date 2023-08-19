@@ -8,6 +8,8 @@ import Search from './pages/Search';
 import Profile from './pages/Profile';
 import Main from './Layout/Main';
 import Mentor from './pages/Mentor';
+import Courses from './pages/Courses';
+import { RequireAuth } from 'react-auth-kit'
 
 function App() {
   const router = createBrowserRouter([
@@ -18,8 +20,12 @@ function App() {
   {path:'/Home', element: <Home></Home>},
   {path:'/Search', element: <Search></Search>},
   {path:'/Profile', element: <Profile></Profile>},
-  {path:'/Mentor/:id', element: <Mentor></Mentor>}]},
-    
+  {path:'/Mentor/:id', element: <Mentor></Mentor>},
+  {path: '/Mentor/:id/Courses', element: <RequireAuth loginPath='/Login'>
+ <Courses></Courses>
+  </RequireAuth>}
+]},
+  
   ])
   return (
     <div className="App">

@@ -33,7 +33,7 @@ const LoginForm = () => {
           tokenType: "Bearer",
           authState: {email: email, name: res.data.name, _id: res.data._id}
         })
-        navigate('/login')
+        navigate('/Login')
       })
     } catch(err) {
       setLoading(false)

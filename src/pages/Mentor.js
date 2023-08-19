@@ -20,7 +20,8 @@ import {
 
 const Mentor = () => {
     // const videoId = 'xNRJwmlRBNU';
-    const videoId = ['xNRJwmlRBNU', '8hly31xKli0'];
+
+    const [videos, setVideos] = useState([]);
     const [mentor, setMentor] = useState()
     const [loading, setLoading] = useState(true)
     const params = useParams();
@@ -44,6 +45,20 @@ const Mentor = () => {
              console.log(err)
          })
      }
+
+     const fetchVideos = () => {
+        axios.get(`https://vmdb-iota.vercel.app/api/get_courses_by_mentor?_id=${params.id}`,).then((res) => {
+             if (res.status == 200) {
+                 setVideos(res.data.map((course) => {return course.url}))
+             }
+         }).catch((err) => {
+             console.log(err)
+         })
+     }
+
+     useEffect(() => {
+        fetchVideos()
+     },[])
 
     useEffect(() => 
     {
@@ -83,7 +98,7 @@ const Mentor = () => {
         })
     }
 
-    function calculateAverageRating(mentorData=mentor) {
+    function calculateAverageRating(mentorData) {
         if (!mentorData || !mentorData.reviews || mentorData.reviews.length === 0) {
           return 0; // Return 0 if no reviews are available
         }
@@ -93,6 +108,7 @@ const Mentor = () => {
         }, 0);
       
         const averageRating = Math.round(totalRatings / mentorData.reviews.length);
+        console.log(averageRating)
         return averageRating; // Return average rating rounded to 2 decimal places
       }
 
@@ -121,7 +137,7 @@ const Mentor = () => {
            
            
           <div className='grid justify-items-center my-8'>
-           <Rating ratingNumber={calculateAverageRating()}></Rating>
+           <Rating ratingNumber={calculateAverageRating(mentor)}></Rating>
           </div>
           <a href={`mailto:${mentor?.contact?.email}`} className='btn btn-primary'>Contact for Research intereset</a>
            </div>
@@ -129,19 +145,22 @@ const Mentor = () => {
             }
         
             </div>
-
-            <div className='grid justify-items'>
+            {
+                videos.length > 0 &&
+                <div className='grid justify-items'>
             <h1 className='text-2xl font-bold'>
                 Sample Recorded Classes
             </h1>
             <div className='flex my-12 justify-center'
-            > {videoId.map(videoId => (
+            > {videos.map(videoId => (
                 <YouTube key={videoId} videoId={videoId} className='mx-12' ></YouTube>
 
             ))}
                 
             </div>
             </div>
+            }
+            
 {
     mentor?.reviews && mentor?.reviews.length > 0 &&
     <div className='max-w-3xl ml-auto mr-auto my-12'>
@@ -199,7 +218,7 @@ const Mentor = () => {
             </form>
             
             <div className='py-12'>
-                <Link to='/Login' className='btn btn-primary'> Enroll full courses here</Link>
+                <Link to={isAuthenticated() == true ? `/Mentor/${params.id}/Courses` : {pathname: '/Login', state: `/Mentor/${params.id}/Courses`} } className='btn btn-primary'> Enroll full courses here</Link>
             </div>
         </div>
     );
